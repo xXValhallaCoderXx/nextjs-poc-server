@@ -1,20 +1,14 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import React from 'react'
+import Layout from '../view/layout'
 
-export default function Home() {
-  return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-    </Layout>
-  )
+export default function Main(props) {
+  return <Layout>
+    <h1> NextJS + ExpressJS POC </h1>
+    <div style={{marginBottom: "4vh"}}/>
+    <ul >
+      <li> <a href="/preload-data"> Preload Data From Server + Dynamic Data </a> </li>
+      <li> <a href="/load-data-api"> Load All Data On Client Side </a> </li>
+      <li> <a href="/conditional/5"> Conditional Routing </a> </li>
+    </ul>
+  </Layout>
 }
